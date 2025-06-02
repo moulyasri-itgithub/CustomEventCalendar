@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Add background */
+  background-image: url('./assests/imagee.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+ 
+  color: white;  
+  min-height: 100vh; 
+}

@@ -1,0 +1,102 @@
+.manage-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #eee;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+.manage-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.month-navigation button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.month-navigation button:hover {
+  background-color: #357abd;
+}
+
+.month-year {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.day-name {
+  font-weight: 700;
+  color: #000;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #bbb;
+}
+
+.calendar-day {
+  padding: 12px 6px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #000;
+}
+
+.calendar-day:hover {
+  background-color: #4a90e2;
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(74 144 226 / 0.4);
+}
+
+.calendar-day.empty {
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+}
+
+@media (max-width: 760px) {
+  .manage-container {
+    padding: 20px 15px;
+    margin: 20px 10px;
+  }
+
+  .calendar-day {
+    padding: 10px 4px;
+    font-size: 0.9rem;
+  }
+
+  .month-navigation button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}

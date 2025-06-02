@@ -1,0 +1,169 @@
+/* Card container for calendar, responsive and centered */
+.calendar-card {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  border-radius: 12px;
+  background-color: #f0f0f0; /* light gray background */
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.calendar-heading {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #222222;
+}
+
+/* Header with dropdowns and centered title */
+.calendar-header {
+  display: flex;
+  justify-content: space-between; /* left, center, right */
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+/* Month dropdown on left */
+.calendar-header select.month-select {
+  min-width: 140px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  background-color: white;
+  color: #222;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.calendar-header select.month-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Year dropdown on right */
+.calendar-header select.year-select {
+  min-width: 140px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  background-color: white;
+  color: #222;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.calendar-header select.year-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Center month-year text */
+.calendar-title {
+  flex-grow: 1;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #007bff; /* bootstrap blue */
+  font-weight: 600;
+  font-size: 1.25rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Grid for weekdays + days */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+/* Weekday names */
+.calendar-weekday {
+  font-weight: 700;
+  text-align: center;
+  color: #555555;
+  user-select: none;
+  font-size: 1rem;
+}
+
+/* Day boxes */
+.calendar-day {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #000000; /* all day numbers black */
+  user-select: none;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+/* Empty day slots */
+.calendar-day.empty {
+  background: transparent;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Highlight today's date with subtle border and background */
+.calendar-day.today {
+  border: 2px solid #007bff;
+  background-color: #d9eaff; /* subtle blue background */
+  font-weight: 700;
+  color: #000000; /* keep text black */
+}
+
+/* Special blue text for August 2025 days */
+.calendar-day.august-2025 {
+  color: #007bff; /* Bootstrap blue */
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .calendar-card {
+    max-width: 95%;
+    padding: 20px 15px;
+  }
+
+  .calendar-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .calendar-header select.month-select,
+  .calendar-header select.year-select {
+    min-width: 45%;
+    font-size: 1.1rem;
+  }
+
+  .calendar-title {
+    flex-basis: 100%;
+    margin: 10px 0;
+    font-size: 1.15rem;
+  }
+
+  .calendar-weekday {
+    font-size: 0.85rem;
+  }
+
+  .calendar-day {
+    height: 30px;
+    font-size: 0.85rem;
+  }
+}
